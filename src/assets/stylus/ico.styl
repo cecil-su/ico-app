@@ -1,0 +1,104 @@
+/* 底部导航栏 */
+.navbar
+    background-color #f8f8f8
+    bottom 0
+    display flex
+    left 0
+    position fixed
+    width 100%
+    z-index 100
+    &-item 
+      color #666
+      flex 1
+      height 56px
+      line-height 56px
+      text-align center
+      text-decoration none
+      &.active 
+        color _blue
+
+/* 头部导航栏 */
+.headbar 
+  background-color _blue
+  color #fff
+  height 40px
+  line-height @height 
+  text-align center
+/* tab切换 */
+.tabbar 
+  background-color #fff
+  display flex
+  &-item 
+    border-bottom 2px solid #fff
+    flex 1
+    padding 12px 0 10px
+    text-align center
+    &.active
+      border-bottom-color _blue
+      color _blue
+/* 项目card模块 */
+.project
+  &-card 
+    background-color #fff
+    display flex
+    margin-top 10px
+    padding 10px
+    &_img 
+      padding 0
+      .img-block
+        border none
+        display block
+        height 80px
+        width 150px
+    &_text
+      flex 1
+      padding-left 10px
+/* 注册登录 */
+.sign 
+  height 100%
+  left 0
+  position fixed
+  top 0
+  width 100%
+  z-index 1000
+  &.in 
+    background-color #fff 
+  &.up 
+    background-color #f8f8f8
+    .mint-cell
+      margin-bottom 1px
+  .form 
+    display flex
+    flex-direction column
+    width 80%
+    .logo
+      margin 0 auto 40px
+      width 150px
+    &-input
+      background-color #eee
+      border none
+      line-height 38px
+      margin-bottom 20px
+      outline none
+      padding-left 50px
+    > .mint-button
+      margin 20px 0 20px
+/* 进度条模块 */
+.progress 
+  background-color #f8f8f8
+  border-radius 5px 
+  height 10px
+  overflow hidden
+  .percent
+    background-color _blue
+    height 10px
+/* flex */
+.flex 
+  display flex
+  &.center
+    align-items center
+    justify-content center
+  &.between
+    justify-content space-between
+  &.column 
+    flex-direction column

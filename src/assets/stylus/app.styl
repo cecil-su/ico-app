@@ -1,0 +1,121 @@
+/* Globals */
+@import './app.reset.styl'
+@import './app.variables.styl'
+@import './app.mixins.styl'
+@import './ico.styl'
+/* Elements */
+.u-block 
+  display block
+// input
+.u-input
+  display flex
+  flex-direction column
+  font-size 1em
+  pos(relative)
+  &.fluid 
+    width 100%
+  > textarea
+    border 1px solid #eee
+    border-radius borderRadius
+    color #999
+    h(150px)
+    outline none
+    padding 5px
+    resize none
+    w()
+    &::-webkit-input-placeholder 
+      color #999
+    &:focus 
+      border-color _blue
+  > input 
+    b-c(rgba(255,255,255,.6))
+    color rgba(0,0,0,.6)
+    margin 0
+    max-width 100%
+    flex 1 0 auto 
+    outline none
+    text-align left 
+    line-height inputHeight
+    padding inputPadding
+    border 1px solid rgba(34,36,38,.15)
+    border-radius borderRadius
+    transition border-color .1s ease
+    &:focus 
+      bd-c(_blue)
+    &::-webkit-input-placeholder 
+      color rgba(0,0,0,.6)
+// button 
+.u-btn 
+  cursor pointer
+  display inline-block
+  min-height 1em
+  outline 0
+  border none
+  vertical-align baseline
+  line-height 1em
+  padding 0.78571429em 1.2em 0.78581429em
+  text-decoration none
+  text-align center
+  border-radius borderRadius
+  user-select none
+  color rgba(0,0,0,.6)
+  transition all .1s ease
+  &.disabled
+    cursor default
+    opacity 0.4
+    pointer-events none !important
+  &.block 
+    w()
+  for n in _colors
+    &.{n[0]}
+      c(rgba(255,255,255,.6))
+      border 1px solid n[1]
+      b-c(n[1])
+      &:hover
+        b-c(darken(n[1], 10))
+      &.fluid 
+        display block 
+        width 100%
+// bgs 
+for n in _colors
+  .u-bg-{n[0]}
+    b-c(n[1])
+// colors 
+for n in _colors
+  .u-text-{n[0]}
+    color n[1] !important
+/* Collections */
+/* Views */
+/* Modules */
+/* Commons */
+*,:after,:before 
+  box-sizing border-box
+html,body
+  h()
+.app 
+  b-c(#ebebeb)
+  font-size 14px
+  min-height 100%
+  // padding-bottom _footer-h
+  pos(relative)
+a 
+  cursor pointer
+  text-decoration none
+ul 
+  list-style none
+  -webkit-margin-before 0
+  -webkit-margin-after 0
+  -webkit-padding-start 0
+  margin 0
+p 
+  margin 0
+  -webkit-margin-before 0
+  -webkit-margin-after 0
+
+
+
+
+
+
+
+
