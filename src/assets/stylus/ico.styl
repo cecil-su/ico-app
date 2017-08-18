@@ -10,12 +10,14 @@
     &-item 
       color #666
       flex 1
-      height 56px
-      line-height 56px
+      height _navbar
+      line-height _navbar
       text-align center
       text-decoration none
       &.active 
         color _blue
+.has-navbar
+  padding-bottom _navbar
 
 /* 头部导航栏 */
 .headbar 
@@ -102,3 +104,10 @@
     justify-content space-between
   &.column 
     flex-direction column
+
+
+/* home */
+.home 
+  &-title 
+    padding 10px 0
+    text-align center

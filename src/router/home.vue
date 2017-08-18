@@ -1,12 +1,17 @@
 <template>
-  <div class="home">
+  <div class="home has-navbar">
     <head-bar></head-bar>
     <mt-swipe :auto="5000">
       <mt-swipe-item v-for="item in banner" :key="item.id" :style="{background: 'url('+ item.picture +') no-repeat center center'}"></mt-swipe-item>
     </mt-swipe>
-    <section>推荐项目</section>
-    <section>热门项目</section>
-    <card v-for="item in items" :item="item" :key="item.id"></card>
+    <section class="home-title">推荐项目</section>
+    <div class="flex between column">
+      <div class="flex">{{recommend.title}}</div>
+    </div>
+    <section class="home-title">热门项目</section>
+    <section>
+      <card v-for="item in items" :item="item" :key="item.id"></card>
+    </section>
     <nav-bar></nav-bar>
   </div>
 </template>

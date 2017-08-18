@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project has-navbar">
     <head-bar></head-bar>
     <tab-bar :items="navs" @change="handleIndex"></tab-bar>
     <card v-for="(item, index) in items" :key="index" :item="item"></card>
